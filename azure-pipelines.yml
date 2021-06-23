@@ -12,7 +12,7 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '0497e7c8-a644-44b7-89f2-806a83ee07ed'
   imageRepository: 'cloudmustafaangulardocker'
-  containerRegistry: 'amk8acr.azurecr.io'
+  containerRegistry: 'demoacram.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
 
