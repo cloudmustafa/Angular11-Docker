@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: simpleapi
-        image: sogetislbdemo.azurecr.io/angll:v1
+        image: amk8acr.azurecr.io/cloudmustafaangulardocker:52
         ports:
         - containerPort: 80
         resources:
