@@ -14,7 +14,7 @@ spec:
     spec: 
       containers: 
       - name: angular 
-        image: demoacram.azurecr.io/myangular:#{Build.BuildId}#
+        image: demoacram.azurecr.io/angularimage:#{Build.BuildId}#
         ports: 
         - containerPort: 80 
 --- 
