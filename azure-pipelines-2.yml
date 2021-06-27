@@ -10,8 +10,8 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '0497e7c8-a644-44b7-89f2-806a83ee07ed'
-  imageRepository: 'cloudmustafaangulardocker'
+  dockerRegistryServiceConnection: '4eb9a760-d98a-4d86-9f5c-04faf27acec7'
+  imageRepository: 'angularimage'
   containerRegistry: 'demoacram.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
@@ -39,7 +39,7 @@ stages:
           $(tag)
     - task: CopyFiles@2
       inputs:
-        Contents: 'Deployment.yaml'
+        Contents: '**'
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
     - task: PublishBuildArtifacts@1
       inputs:

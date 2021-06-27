@@ -6,7 +6,7 @@ spec:
   selector: 
     matchLabels: 
       app: angular 
-  replicas: 2 # tells deployment to run 2 pods matching the template 
+  replicas: 1 # tells deployment to run 2 pods matching the template 
   template:
     metadata: 
       labels: 
@@ -14,16 +14,15 @@ spec:
     spec: 
       containers: 
       - name: angular 
-        image: demoacram.azurecr.io/myangular:v1
+        image: demoacram.azurecr.io/angularimage:#{Build.BuildId}#
         ports: 
         - containerPort: 80 
 --- 
-# https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service
+# https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service  
 kind: Service 
 apiVersion: v1 
 metadata: 
-  name: angular-service
-  namespace: mychart 
+  name: angular-service 
 spec: 
   selector: 
     app: angular 
