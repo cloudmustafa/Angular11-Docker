@@ -37,6 +37,11 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+    - task: HelmInstaller@1
+      displayName: 'install helm'
+      inputs:
+        helmVersionToInstall: 'latest'
+
     - task: CopyFiles@2
       inputs:
         Contents: '**'
