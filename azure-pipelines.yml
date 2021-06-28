@@ -40,7 +40,7 @@ stages:
     - task: HelmInstaller@1
       displayName: 'install helm'
       inputs:
-        helmVersionToInstall: $(helmVersion)
+        helmVersionToInstall: 'latest'
 
     - task: CopyFiles@2
       inputs:
